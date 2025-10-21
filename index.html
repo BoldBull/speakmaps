@@ -3,7 +3,40 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Speak to Maps</title>
+
+  <title>Speak to Maps – Say an Address, Open Google Maps</title>
+
+  <meta name="description" content="Say an address out loud and open it instantly in Google Maps. Works on Android, iPhone, and desktop browsers — no app download needed." />
+  <meta name="keywords" content="voice to maps, speak address, open address google maps, voice navigation, google maps shortcut, voice directions" />
+
+  <!-- Social preview (OG tags) -->
+  <meta property="og:title" content="Speak to Maps – Say It, Open It" />
+  <meta property="og:description" content="Say an address out loud and open it instantly in Google Maps. Works on any device." />
+  <meta property="og:url" content="https://boldbull.github.io/speakmaps/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://boldbull.github.io/speakmaps/icon-512.png" />
+  <meta property="twitter:card" content="summary_large_image" />
+  <meta property="twitter:title" content="Speak to Maps – Say It, Open It" />
+  <meta property="twitter:description" content="Say an address out loud and open it instantly in Google Maps. Works on any device." />
+
+  <!-- Optional PWA manifest (doesn't change SEO) -->
+  <link rel="manifest" href="/manifest.webmanifest">
+  <meta name="theme-color" content="#111">
+
+  <!-- Structured data for Google -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Speak to Maps",
+    "url": "https://boldbull.github.io/speakmaps/",
+    "applicationCategory": "UtilityApplication",
+    "operatingSystem": "Android, iOS, Web",
+    "description": "Say an address and open it instantly in Google Maps using voice recognition."
+  }
+  </script>
+
+  <!-- Your styles (keep these as-is) -->
   <style>
     body{font-family:system-ui,Segoe UI,Arial;margin:0;display:grid;place-items:center;min-height:100svh;background:#111;color:#fff}
     .card{width:min(720px,92%);background:#1b1b1b;border-radius:18px;padding:24px;box-shadow:0 10px 30px rgba(0,0,0,.35)}
@@ -13,6 +46,7 @@
     input{width:100%;padding:12px 14px;border-radius:10px;border:1px solid #333;background:#0f0f0f;color:#fff;margin:12px 0}
   </style>
 </head>
+
 <body>
   <div class="card">
     <h1>Speak an address → open in Maps</h1>
@@ -89,3 +123,4 @@
   </script>
 </body>
 </html>
+
