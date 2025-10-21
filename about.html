@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Speak to Maps</title>
+    <meta name="description" content="Learn about Speak to Maps - the voice-to-Google Maps service that makes navigation faster and easier for everyone.">
+    <link rel="canonical" href="https://boldbull.github.io/speakmaps/about.html">
+    <style>
+        :root {
+            --primary-color: #6366f1;
+            --background: #0a0a0a;
+            --surface: #111111;
+            --surface-elevated: #1a1a1a;
+            --text-primary: #ffffff;
+            --text-secondary: #d1d5db;
+            --text-muted: #9ca3af;
+            --border: #2a2a2a;
+        }
+
+        [data-theme="light"] {
+            --background: #f8fafc;
+            --surface: #ffffff;
+            --surface-elevated: #f1f5f9;
+            --text-primary: #0f172a;
+            --text-secondary: #475569;
+            --text-muted: #64748b;
+            --border: #e2e8f0;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            background: linear-gradient(135deg, var(--background) 0%, var(--surface) 50%, var(--surface-elevated) 100%);
+            color: var(--text-primary);
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin: 0 0 1rem 0;
+            color: var(--text-primary);
+        }
+
+        .back-link {
+            display: inline-block;
+            color: var(--primary-color);
+            text-decoration: none;
+            margin-bottom: 2rem;
+            font-weight: 500;
+        }
+
+        .back-link:hover {
+            text-decoration: underline;
+        }
+
+        .content {
+            background: var(--surface);
+            padding: 2rem;
+            border-radius: 1rem;
+            border: 1px solid var(--border);
+        }
+
+        h1, h2, h3 {
+            color: var(--text-primary);
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        h1 {
+            font-size: 2rem;
+        }
+
+        h2 {
+            font-size: 1.5rem;
+            color: var(--primary-color);
+        }
+
+        p {
+            color: var(--text-secondary);
+            margin-bottom: 1rem;
+        }
+
+        ul, ol {
+            color: var(--text-secondary);
+            margin-bottom: 1rem;
+            padding-left: 2rem;
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .feature-card {
+            background: var(--surface-elevated);
+            padding: 1.5rem;
+            border-radius: 0.75rem;
+            border: 1px solid var(--border);
+            text-align: center;
+        }
+
+        .feature-icon {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        .feature-title {
+            font-weight: 600;
+            color: var(--text-primary);
+            margin: 0 0 0.5rem 0;
+            font-size: 1.1rem;
+        }
+
+        .feature-desc {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            margin: 0;
+        }
+
+        .theme-toggle {
+            position: fixed;
+            top: 1rem;
+            right: 1rem;
+            width: 3rem;
+            height: 3rem;
+            border-radius: 50%;
+            border: 2px solid var(--border);
+            background: var(--surface);
+            color: var(--text-primary);
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.25rem;
+            transition: all 0.3s ease;
+            z-index: 1000;
+        }
+
+        .theme-toggle:hover {
+            transform: scale(1.1);
+        }
+
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 1rem;
+            margin: 2rem 0;
+        }
+
+        .stat {
+            text-align: center;
+            padding: 1rem;
+            background: var(--surface-elevated);
+            border-radius: 0.5rem;
+            border: 1px solid var(--border);
+        }
+
+        .stat-number {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            margin: 0;
+        }
+
+        .stat-label {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            margin: 0.5rem 0 0 0;
+        }
+    </style>
+</head>
+<body>
+    <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+        <span id="themeIcon">🌙</span>
+    </button>
+
+    <div class="container">
+        <div class="header">
+            <a href="index.html" class="back-link">← Back to Speak to Maps</a>
+            <h1 class="title">About Speak to Maps</h1>
+        </div>
+
+        <div class="content">
+            <h2>Our Mission</h2>
+            <p>At Speak to Maps, we believe that navigation should be as simple as speaking. Our mission is to make getting directions faster, easier, and more accessible for everyone. We've created a tool that bridges the gap between voice commands and Google Maps, eliminating the need to type addresses or download additional apps.</p>
+
+            <h2>What We Do</h2>
+            <p>Speak to Maps is a revolutionary web-based application that converts your speech directly into Google Maps navigation. Simply say any address out loud, and we'll instantly open it in Google Maps on your device. Whether you're driving, walking, or planning a trip, our service makes navigation effortless.</p>
+
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <span class="feature-icon">🎯</span>
+                    <h3 class="feature-title">Precision</h3>
+                    <p class="feature-desc">Accurate voice recognition that understands natural speech patterns</p>
+                </div>
+                <div class="feature-card">
+                    <span class="feature-icon">⚡</span>
+                    <h3 class="feature-title">Speed</h3>
+                    <p class="feature-desc">Instant processing and map opening in seconds</p>
+                </div>
+                <div class="feature-card">
+                    <span class="feature-icon">🔒</span>
+                    <h3 class="feature-title">Privacy</h3>
+                    <p class="feature-desc">Your voice data stays on your device - no tracking or storage</p>
+                </div>
+                <div class="feature-card">
+                    <span class="feature-icon">🌐</span>
+                    <h3 class="feature-title">Universal</h3>
+                    <p class="feature-desc">Works across Android, desktop, and tablet devices</p>
+                </div>
+            </div>
+
+            <h2>Why We Built This</h2>
+            <p>We noticed that while voice assistants are becoming more common, there wasn't a simple, direct way to convert speech to Google Maps navigation. Users had to either type addresses manually or use complex voice commands through various apps. We wanted to create something that was:</p>
+            <ul>
+                <li><strong>Simple:</strong> Just speak and go - no complex setup or learning curve</li>
+                <li><strong>Fast:</strong> Instant results without waiting for app downloads or account creation</li>
+                <li><strong>Private:</strong> No data collection, no tracking, no accounts required</li>
+                <li><strong>Accessible:</strong> Works for everyone, including those with mobility or vision challenges</li>
+            </ul>
+
+            <h2>Our Technology</h2>
+            <p>Speak to Maps leverages modern web technologies to provide a seamless experience:</p>
+            <ul>
+                <li><strong>Web Speech API:</strong> For accurate voice recognition on supported browsers</li>
+                <li><strong>Responsive Design:</strong> Optimized for all screen sizes and devices</li>
+                <li><strong>Progressive Web App:</strong> Fast loading and offline-capable</li>
+                <li><strong>Privacy-First Architecture:</strong> All processing happens locally on your device</li>
+            </ul>
+
+            <div class="stats">
+                <div class="stat">
+                    <div class="stat-number">100%</div>
+                    <div class="stat-label">Privacy Focused</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-number">0</div>
+                    <div class="stat-label">Data Stored</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-number">3s</div>
+                    <div class="stat-label">Average Load Time</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-number">24/7</div>
+                    <div class="stat-label">Always Available</div>
+                </div>
+            </div>
+
+            <h2>Our Commitment</h2>
+            <p>We're committed to maintaining the highest standards of privacy, security, and user experience. Our service will always be:</p>
+            <ul>
+                <li><strong>Free to use:</strong> No hidden costs or premium features</li>
+                <li><strong>Privacy-focused:</strong> We never collect or store your personal data</li>
+                <li><strong>Continuously improved:</strong> Regular updates based on user feedback</li>
+                <li><strong>Open and transparent:</strong> Clear about how our service works</li>
+            </ul>
+
+            <h2>Contact Us</h2>
+            <p>We'd love to hear from you! Whether you have feedback, suggestions, or just want to say hello, we're here to listen.</p>
+            <ul>
+                <li><strong>Email:</strong> hello@speaktomaps.com</li>
+                <li><strong>Website:</strong> <a href="https://boldbull.github.io/speakmaps/">https://boldbull.github.io/speakmaps/</a></li>
+                <li><strong>Feedback:</strong> We read every message and use your input to improve our service</li>
+            </ul>
+
+            <p>Thank you for choosing Speak to Maps. We're excited to be part of your navigation journey!</p>
+        </div>
+    </div>
+
+    <script>
+        // Theme Toggle Functionality
+        const themeToggle = document.getElementById("themeToggle");
+        const themeIcon = document.getElementById("themeIcon");
+        
+        // Get saved theme or default to dark
+        const savedTheme = localStorage.getItem('theme') || 'dark';
+        document.documentElement.setAttribute('data-theme', savedTheme);
+        themeIcon.textContent = savedTheme === 'dark' ? '🌙' : '☀️';
+        
+        themeToggle.addEventListener('click', () => {
+            const currentTheme = document.documentElement.getAttribute('data-theme');
+            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+            
+            document.documentElement.setAttribute('data-theme', newTheme);
+            themeIcon.textContent = newTheme === 'dark' ? '🌙' : '☀️';
+            localStorage.setItem('theme', newTheme);
+        });
+    </script>
+</body>
+</html>

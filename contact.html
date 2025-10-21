@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Speak to Maps</title>
+    <meta name="description" content="Get in touch with Speak to Maps team. We'd love to hear your feedback, suggestions, or answer any questions about our voice-to-maps service.">
+    <link rel="canonical" href="https://boldbull.github.io/speakmaps/contact.html">
+    <style>
+        :root {
+            --primary-color: #6366f1;
+            --background: #0a0a0a;
+            --surface: #111111;
+            --surface-elevated: #1a1a1a;
+            --text-primary: #ffffff;
+            --text-secondary: #d1d5db;
+            --text-muted: #9ca3af;
+            --border: #2a2a2a;
+            --border-focus: #6366f1;
+        }
+
+        [data-theme="light"] {
+            --background: #f8fafc;
+            --surface: #ffffff;
+            --surface-elevated: #f1f5f9;
+            --text-primary: #0f172a;
+            --text-secondary: #475569;
+            --text-muted: #64748b;
+            --border: #e2e8f0;
+            --border-focus: #6366f1;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            background: linear-gradient(135deg, var(--background) 0%, var(--surface) 50%, var(--surface-elevated) 100%);
+            color: var(--text-primary);
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin: 0 0 1rem 0;
+            color: var(--text-primary);
+        }
+
+        .back-link {
+            display: inline-block;
+            color: var(--primary-color);
+            text-decoration: none;
+            margin-bottom: 2rem;
+            font-weight: 500;
+        }
+
+        .back-link:hover {
+            text-decoration: underline;
+        }
+
+        .content {
+            background: var(--surface);
+            padding: 2rem;
+            border-radius: 1rem;
+            border: 1px solid var(--border);
+        }
+
+        h1, h2, h3 {
+            color: var(--text-primary);
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        h1 {
+            font-size: 2rem;
+        }
+
+        h2 {
+            font-size: 1.5rem;
+            color: var(--primary-color);
+        }
+
+        p {
+            color: var(--text-secondary);
+            margin-bottom: 1rem;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        .contact-card {
+            background: var(--surface-elevated);
+            padding: 2rem;
+            border-radius: 0.75rem;
+            border: 1px solid var(--border);
+            text-align: center;
+        }
+
+        .contact-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        .contact-title {
+            font-weight: 600;
+            color: var(--text-primary);
+            margin: 0 0 0.5rem 0;
+            font-size: 1.2rem;
+        }
+
+        .contact-desc {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            margin: 0 0 1rem 0;
+        }
+
+        .contact-link {
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .contact-link:hover {
+            text-decoration: underline;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-label {
+            display: block;
+            color: var(--text-primary);
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+        }
+
+        .form-input, .form-textarea {
+            width: 100%;
+            padding: 0.75rem;
+            border: 2px solid var(--border);
+            border-radius: 0.5rem;
+            background: var(--surface-elevated);
+            color: var(--text-primary);
+            font-size: 1rem;
+            transition: border-color 0.2s ease;
+        }
+
+        .form-input:focus, .form-textarea:focus {
+            outline: none;
+            border-color: var(--border-focus);
+        }
+
+        .form-textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+
+        .form-button {
+            background: linear-gradient(135deg, var(--primary-color) 0%, #4f46e5 100%);
+            color: white;
+            border: none;
+            padding: 0.75rem 2rem;
+            border-radius: 0.5rem;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: transform 0.2s ease;
+        }
+
+        .form-button:hover {
+            transform: translateY(-1px);
+        }
+
+        .form-button:active {
+            transform: translateY(0);
+        }
+
+        .faq-item {
+            background: var(--surface-elevated);
+            padding: 1.5rem;
+            border-radius: 0.5rem;
+            border: 1px solid var(--border);
+            margin-bottom: 1rem;
+        }
+
+        .faq-question {
+            font-weight: 600;
+            color: var(--text-primary);
+            margin: 0 0 0.5rem 0;
+        }
+
+        .faq-answer {
+            color: var(--text-secondary);
+            margin: 0;
+        }
+
+        .theme-toggle {
+            position: fixed;
+            top: 1rem;
+            right: 1rem;
+            width: 3rem;
+            height: 3rem;
+            border-radius: 50%;
+            border: 2px solid var(--border);
+            background: var(--surface);
+            color: var(--text-primary);
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.25rem;
+            transition: all 0.3s ease;
+            z-index: 1000;
+        }
+
+        .theme-toggle:hover {
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body>
+    <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+        <span id="themeIcon">🌙</span>
+    </button>
+
+    <div class="container">
+        <div class="header">
+            <a href="index.html" class="back-link">← Back to Speak to Maps</a>
+            <h1 class="title">Contact Us</h1>
+            <p>We'd love to hear from you! Get in touch with any questions, feedback, or suggestions.</p>
+        </div>
+
+        <div class="content">
+            <div class="contact-grid">
+                <div class="contact-card">
+                    <span class="contact-icon">📧</span>
+                    <h3 class="contact-title">Email Us</h3>
+                    <p class="contact-desc">Send us an email and we'll get back to you within 24 hours</p>
+                    <a href="mailto:hello@speaktomaps.com" class="contact-link">hello@speaktomaps.com</a>
+                </div>
+                <div class="contact-card">
+                    <span class="contact-icon">💬</span>
+                    <h3 class="contact-title">Feedback</h3>
+                    <p class="contact-desc">Share your thoughts and help us improve our service</p>
+                    <a href="mailto:feedback@speaktomaps.com" class="contact-link">feedback@speaktomaps.com</a>
+                </div>
+                <div class="contact-card">
+                    <span class="contact-icon">🛠️</span>
+                    <h3 class="contact-title">Support</h3>
+                    <p class="contact-desc">Technical issues or questions about using our service</p>
+                    <a href="mailto:support@speaktomaps.com" class="contact-link">support@speaktomaps.com</a>
+                </div>
+                <div class="contact-card">
+                    <span class="contact-icon">🤝</span>
+                    <h3 class="contact-title">Partnership</h3>
+                    <p class="contact-desc">Interested in partnering with us or have business inquiries</p>
+                    <a href="mailto:partnerships@speaktomaps.com" class="contact-link">partnerships@speaktomaps.com</a>
+                </div>
+            </div>
+
+            <h2>Send us a Message</h2>
+            <form id="contactForm">
+                <div class="form-group">
+                    <label for="name" class="form-label">Name *</label>
+                    <input type="text" id="name" name="name" class="form-input" required>
+                </div>
+                <div class="form-group">
+                    <label for="email" class="form-label">Email *</label>
+                    <input type="email" id="email" name="email" class="form-input" required>
+                </div>
+                <div class="form-group">
+                    <label for="subject" class="form-label">Subject *</label>
+                    <input type="text" id="subject" name="subject" class="form-input" required>
+                </div>
+                <div class="form-group">
+                    <label for="message" class="form-label">Message *</label>
+                    <textarea id="message" name="message" class="form-textarea" required></textarea>
+                </div>
+                <button type="submit" class="form-button">Send Message</button>
+            </form>
+
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-item">
+                <h3 class="faq-question">How quickly do you respond to emails?</h3>
+                <p class="faq-answer">We typically respond to all emails within 24 hours during business days. For urgent technical issues, we aim to respond within 4-6 hours.</p>
+            </div>
+            <div class="faq-item">
+                <h3 class="faq-question">Do you offer phone support?</h3>
+                <p class="faq-answer">Currently, we provide support primarily through email. This allows us to provide detailed, written responses and maintain records of all communications.</p>
+            </div>
+            <div class="faq-item">
+                <h3 class="faq-question">Can I suggest new features?</h3>
+                <p class="faq-answer">Absolutely! We love hearing your ideas and suggestions. Send them to feedback@speaktomaps.com and we'll consider them for future updates.</p>
+            </div>
+            <div class="faq-item">
+                <h3 class="faq-question">Do you have a bug reporting system?</h3>
+                <p class="faq-answer">Yes! If you encounter any bugs or issues, please email us at support@speaktomaps.com with details about what happened and what device/browser you were using.</p>
+            </div>
+
+            <h2>Other Ways to Connect</h2>
+            <p>While email is our primary communication method, you can also:</p>
+            <ul>
+                <li><strong>Visit our website:</strong> <a href="https://boldbull.github.io/speakmaps/" class="contact-link">https://boldbull.github.io/speakmaps/</a></li>
+                <li><strong>Check our FAQ:</strong> Look for answers to common questions on our main page</li>
+                <li><strong>Report issues:</strong> Use the support email for any technical problems</li>
+            </ul>
+
+            <h2>Response Times</h2>
+            <p>Here's what you can expect when contacting us:</p>
+            <ul>
+                <li><strong>General inquiries:</strong> 24 hours</li>
+                <li><strong>Technical support:</strong> 4-6 hours</li>
+                <li><strong>Bug reports:</strong> 2-4 hours</li>
+                <li><strong>Feature requests:</strong> 48 hours</li>
+            </ul>
+
+            <p>Thank you for your interest in Speak to Maps. We look forward to hearing from you!</p>
+        </div>
+    </div>
+
+    <script>
+        // Theme Toggle Functionality
+        const themeToggle = document.getElementById("themeToggle");
+        const themeIcon = document.getElementById("themeIcon");
+        
+        // Get saved theme or default to dark
+        const savedTheme = localStorage.getItem('theme') || 'dark';
+        document.documentElement.setAttribute('data-theme', savedTheme);
+        themeIcon.textContent = savedTheme === 'dark' ? '🌙' : '☀️';
+        
+        themeToggle.addEventListener('click', () => {
+            const currentTheme = document.documentElement.getAttribute('data-theme');
+            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+            
+            document.documentElement.setAttribute('data-theme', newTheme);
+            themeIcon.textContent = newTheme === 'dark' ? '🌙' : '☀️';
+            localStorage.setItem('theme', newTheme);
+        });
+
+        // Contact Form Handling
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get form data
+            const formData = new FormData(this);
+            const name = formData.get('name');
+            const email = formData.get('email');
+            const subject = formData.get('subject');
+            const message = formData.get('message');
+            
+            // Create mailto link
+            const mailtoLink = `mailto:hello@speaktomaps.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`)}`;
+            
+            // Open email client
+            window.location.href = mailtoLink;
+            
+            // Show success message
+            alert('Thank you for your message! Your email client should open with a pre-filled message. If it doesn\'t, please email us directly at hello@speaktomaps.com');
+        });
+    </script>
+</body>
+</html>
