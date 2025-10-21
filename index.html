@@ -4,20 +4,30 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <title>Speak to Maps – Say an Address, Open Google Maps</title>
+  <title>Speak to Maps - Voice to Google Maps | Instant Navigation Tool</title>
 
-  <meta name="description" content="Say an address out loud and open it instantly in Google Maps. Works on Android, iPhone, and desktop browsers — no app download needed." />
-  <meta name="keywords" content="voice to maps, speak address, open address google maps, voice navigation, google maps shortcut, voice directions" />
+  <meta name="description" content="Convert speech to Google Maps instantly. Say any address out loud and open it in Google Maps on Android, desktop, and tablets. No app download required - works in your browser." />
+  <meta name="keywords" content="voice to maps, speech to google maps, voice navigation, speak address, google maps voice, voice directions, speech recognition maps, voice search maps, instant navigation, voice to location" />
+  <meta name="author" content="Speak to Maps" />
+  <meta name="robots" content="index, follow" />
+  <meta name="googlebot" content="index, follow" />
+  <link rel="canonical" href="https://boldbull.github.io/speakmaps/" />
+  <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
 
   <!-- Social preview (OG tags) -->
-  <meta property="og:title" content="Speak to Maps – Say It, Open It" />
-  <meta property="og:description" content="Say an address out loud and open it instantly in Google Maps. Works on any device." />
+  <meta property="og:title" content="Speak to Maps - Voice to Google Maps | Instant Navigation" />
+  <meta property="og:description" content="Convert speech to Google Maps instantly. Say any address and open it in Google Maps on Android, desktop, and tablets. No app download required." />
   <meta property="og:url" content="https://boldbull.github.io/speakmaps/" />
   <meta property="og:type" content="website" />
   <meta property="og:image" content="https://boldbull.github.io/speakmaps/icon-512.png" />
+  <meta property="og:image:width" content="512" />
+  <meta property="og:image:height" content="512" />
+  <meta property="og:image:alt" content="Speak to Maps - Voice to Google Maps Tool" />
+  <meta property="og:site_name" content="Speak to Maps" />
   <meta property="twitter:card" content="summary_large_image" />
-  <meta property="twitter:title" content="Speak to Maps – Say It, Open It" />
-  <meta property="twitter:description" content="Say an address out loud and open it instantly in Google Maps. Works on any device." />
+  <meta property="twitter:title" content="Speak to Maps - Voice to Google Maps | Instant Navigation" />
+  <meta property="twitter:description" content="Convert speech to Google Maps instantly. Say any address and open it in Google Maps on Android, desktop, and tablets. No app download required." />
+  <meta property="twitter:image" content="https://boldbull.github.io/speakmaps/icon-512.png" />
 
   <!-- Optional PWA manifest (doesn't change SEO) -->
   <link rel="manifest" href="/manifest.webmanifest">
@@ -32,42 +42,692 @@
     "url": "https://boldbull.github.io/speakmaps/",
     "applicationCategory": "UtilityApplication",
     "operatingSystem": "Android, iOS, Web",
-    "description": "Say an address and open it instantly in Google Maps using voice recognition."
+    "description": "Convert speech to Google Maps instantly. Say any address and open it in Google Maps using voice recognition.",
+    "browserRequirements": "Requires JavaScript. Voice recognition works on Chrome, Edge, and Android browsers.",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    },
+    "creator": {
+      "@type": "Organization",
+      "name": "Speak to Maps"
+    },
+    "keywords": "voice to maps, speech to google maps, voice navigation, speak address, google maps voice, voice directions",
+    "inLanguage": "en-US",
+    "isAccessibleForFree": true,
+    "datePublished": "2024-01-01",
+    "dateModified": "2024-01-01"
   }
   </script>
 
-  <!-- Your styles (keep these as-is) -->
+  <!-- Modern Professional Styles -->
   <style>
-    body{font-family:system-ui,Segoe UI,Arial;margin:0;display:grid;place-items:center;min-height:100svh;background:#111;color:#fff}
-    .card{width:min(720px,92%);background:#1b1b1b;border-radius:18px;padding:24px;box-shadow:0 10px 30px rgba(0,0,0,.35)}
-    button{font-size:18px;padding:14px 18px;border-radius:12px;border:0;cursor:pointer}
-    .go{background:#4ade80} .stop{background:#f87171}
-    .hint{opacity:.8;margin:.5rem 0 0}
-    input{width:100%;padding:12px 14px;border-radius:10px;border:1px solid #333;background:#0f0f0f;color:#fff;margin:12px 0}
+    :root {
+      --primary-color: #6366f1;
+      --primary-hover: #4f46e5;
+      --success-color: #22c55e;
+      --error-color: #f43f5e;
+      --warning-color: #f59e0b;
+      --background: #0a0a0a;
+      --surface: #111111;
+      --surface-elevated: #1a1a1a;
+      --text-primary: #ffffff;
+      --text-secondary: #d1d5db;
+      --text-muted: #9ca3af;
+      --border: #2a2a2a;
+      --border-focus: #6366f1;
+    }
+
+    [data-theme="light"] {
+      --background: #f8fafc;
+      --surface: #ffffff;
+      --surface-elevated: #f1f5f9;
+      --text-primary: #0f172a;
+      --text-secondary: #475569;
+      --text-muted: #64748b;
+      --border: #e2e8f0;
+      --border-focus: #6366f1;
+    }
+
+    :root {
+      --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+      --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+      --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+      --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+      --radius-sm: 0.375rem;
+      --radius-md: 0.5rem;
+      --radius-lg: 0.75rem;
+      --radius-xl: 1rem;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
+      margin: 0;
+      padding: 0;
+      min-height: 100vh;
+      background: linear-gradient(135deg, var(--background) 0%, var(--surface) 50%, var(--surface-elevated) 100%);
+      color: var(--text-primary);
+      line-height: 1.6;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 1rem;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 42rem;
+      margin: 0 auto;
+    }
+
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-xl);
+      padding: 2.5rem;
+      box-shadow: var(--shadow-xl);
+      backdrop-filter: blur(10px);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--primary-color), transparent);
+    }
+
+    .header {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    .main-nav {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      margin-bottom: 2rem;
+      flex-wrap: wrap;
+    }
+
+    .nav-link {
+      color: var(--text-secondary);
+      text-decoration: none;
+      padding: 0.5rem 1rem;
+      border-radius: 0.5rem;
+      transition: all 0.2s ease;
+      font-weight: 500;
+    }
+
+    .nav-link:hover {
+      color: var(--primary-color);
+      background: var(--surface-elevated);
+    }
+
+    .nav-link.active {
+      color: var(--primary-color);
+      background: var(--surface-elevated);
+    }
+
+    /* Hamburger Menu */
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+      padding: 0.5rem;
+      background: transparent;
+      border: none;
+      border-radius: 0.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .hamburger span {
+      width: 25px;
+      height: 3px;
+      background: var(--text-primary);
+      margin: 3px 0;
+      transition: 0.3s;
+    }
+
+    .hamburger.active span:nth-child(1) {
+      transform: rotate(-45deg) translate(-5px, 6px);
+    }
+
+    .hamburger.active span:nth-child(2) {
+      opacity: 0;
+    }
+
+    .hamburger.active span:nth-child(3) {
+      transform: rotate(45deg) translate(-5px, -6px);
+    }
+
+    .mobile-nav {
+      display: none;
+      flex-direction: column;
+      gap: 0.5rem;
+      margin-bottom: 2rem;
+      background: var(--surface-elevated);
+      padding: 1rem;
+      border-radius: 0.5rem;
+      border: 1px solid var(--border);
+    }
+
+    .mobile-nav.active {
+      display: flex;
+    }
+
+    .mobile-nav .nav-link {
+      padding: 0.75rem 1rem;
+      text-align: center;
+    }
+
+    /* Footer */
+    .footer {
+      margin-top: 3rem;
+      padding: 2rem 0;
+      border-top: 1px solid var(--border);
+      text-align: center;
+    }
+
+    .footer-content {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 2rem;
+      margin-bottom: 2rem;
+    }
+
+    .footer-section h3 {
+      color: var(--text-primary);
+      margin-bottom: 1rem;
+      font-size: 1.1rem;
+    }
+
+    .footer-section ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .footer-section li {
+      margin-bottom: 0.5rem;
+    }
+
+    .footer-section a {
+      color: var(--text-secondary);
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+
+    .footer-section a:hover {
+      color: var(--primary-color);
+    }
+
+    .footer-bottom {
+      padding-top: 1rem;
+      border-top: 1px solid var(--border);
+      color: var(--text-muted);
+      font-size: 0.9rem;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .main-nav {
+        display: none;
+      }
+
+      .hamburger {
+        display: flex;
+      }
+    }
+
+    .title {
+      font-size: 2.25rem;
+      font-weight: 700;
+      margin: 0 0 0.5rem 0;
+      background: linear-gradient(135deg, var(--text-primary) 0%, var(--primary-color) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      line-height: 1.2;
+    }
+
+    .subtitle {
+      font-size: 1.125rem;
+      color: var(--text-secondary);
+      margin: 0;
+      font-weight: 400;
+    }
+
+    .controls {
+      margin-bottom: 2rem;
+    }
+
+    .button {
+      width: 100%;
+      font-size: 1.125rem;
+      font-weight: 600;
+      padding: 1rem 1.5rem;
+      border-radius: var(--radius-lg);
+      border: none;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      margin-bottom: 1rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .button:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+      transition: left 0.5s;
+    }
+
+    .button:hover:before {
+      left: 100%;
+    }
+
+    .button.go {
+      background: linear-gradient(135deg, var(--success-color) 0%, #16a34a 100%);
+      color: white;
+      box-shadow: 0 4px 14px 0 rgba(34, 197, 94, 0.3);
+    }
+
+    .button.go:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 6px 20px 0 rgba(34, 197, 94, 0.4);
+    }
+
+    .button.stop {
+      background: linear-gradient(135deg, var(--error-color) 0%, #e11d48 100%);
+      color: white;
+      box-shadow: 0 4px 14px 0 rgba(244, 63, 94, 0.3);
+    }
+
+    .button.stop:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 6px 20px 0 rgba(244, 63, 94, 0.4);
+    }
+
+    .button:active {
+      transform: translateY(0);
+    }
+
+    .input-group {
+      position: relative;
+      margin-bottom: 1rem;
+    }
+
+    .input {
+      width: 100%;
+      padding: 1rem 1.25rem;
+      border: 2px solid var(--border);
+      border-radius: var(--radius-lg);
+      background: var(--surface-elevated);
+      color: var(--text-primary);
+      font-size: 1rem;
+      transition: all 0.2s ease;
+      outline: none;
+    }
+
+    .input:focus {
+      border-color: var(--border-focus);
+      box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+    }
+
+    .input::placeholder {
+      color: var(--text-muted);
+    }
+
+    .hint {
+      color: var(--text-secondary);
+      font-size: 0.875rem;
+      margin: 0.5rem 0 0 0;
+      text-align: center;
+    }
+
+    .hint em {
+      color: var(--primary-color);
+      font-style: normal;
+      font-weight: 500;
+    }
+
+    .status {
+      text-align: center;
+      padding: 0.75rem 1rem;
+      border-radius: var(--radius-md);
+      margin: 1rem 0;
+      font-weight: 500;
+      min-height: 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .status.success {
+      background: rgba(34, 197, 94, 0.1);
+      color: var(--success-color);
+      border: 1px solid rgba(34, 197, 94, 0.2);
+    }
+
+    .status.error {
+      background: rgba(244, 63, 94, 0.1);
+      color: var(--error-color);
+      border: 1px solid rgba(244, 63, 94, 0.2);
+    }
+
+    .status.info {
+      background: rgba(99, 102, 241, 0.1);
+      color: var(--primary-color);
+      border: 1px solid rgba(99, 102, 241, 0.2);
+    }
+
+    .content {
+      margin-top: 2rem;
+    }
+
+    .content p {
+      color: var(--text-secondary);
+      margin: 0 0 1rem 0;
+      font-size: 0.95rem;
+      line-height: 1.7;
+    }
+
+    .content p:last-child {
+      margin-bottom: 0;
+    }
+
+    .features {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem;
+      margin-top: 1.5rem;
+      margin-bottom: 2rem;
+    }
+
+    .feature {
+      background: var(--surface-elevated);
+      padding: 1rem;
+      border-radius: var(--radius-md);
+      border: 1px solid var(--border);
+      text-align: center;
+    }
+
+    .feature-icon {
+      font-size: 1.5rem;
+      margin-bottom: 0.5rem;
+      display: block;
+    }
+
+    .feature-title {
+      font-weight: 600;
+      color: var(--text-primary);
+      margin: 0 0 0.25rem 0;
+      font-size: 0.875rem;
+    }
+
+    .feature-desc {
+      color: var(--text-muted);
+      font-size: 0.75rem;
+      margin: 0;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      body {
+        padding: 0.5rem;
+      }
+
+      .card {
+        padding: 1.5rem;
+        border-radius: var(--radius-lg);
+      }
+
+      .title {
+        font-size: 1.875rem;
+      }
+
+      .subtitle {
+        font-size: 1rem;
+      }
+
+      .button {
+        font-size: 1rem;
+        padding: 0.875rem 1.25rem;
+      }
+
+      .features {
+        grid-template-columns: 1fr;
+        gap: 0.75rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .card {
+        padding: 1.25rem;
+      }
+
+      .title {
+        font-size: 1.5rem;
+      }
+
+      .button {
+        padding: 0.75rem 1rem;
+        font-size: 0.95rem;
+      }
+    }
+
+    /* Animation for status messages */
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(10px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .status {
+      animation: fadeInUp 0.3s ease;
+    }
+
+    /* Loading animation */
+    @keyframes pulse {
+      0%, 100% {
+        opacity: 1;
+      }
+      50% {
+        opacity: 0.5;
+      }
+    }
+
+    .button.loading {
+      animation: pulse 1.5s ease-in-out infinite;
+    }
+
+    /* Theme Toggle */
+    .theme-toggle {
+      position: fixed;
+      top: 1rem;
+      right: 1rem;
+      width: 3rem;
+      height: 3rem;
+      border-radius: 50%;
+      border: 2px solid var(--border);
+      background: var(--surface);
+      color: var(--text-primary);
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.25rem;
+      transition: all 0.3s ease;
+      box-shadow: var(--shadow-md);
+      z-index: 1000;
+    }
+
+    .theme-toggle:hover {
+      transform: scale(1.1);
+      box-shadow: var(--shadow-lg);
+      border-color: var(--border-focus);
+    }
+
+    .theme-toggle:active {
+      transform: scale(0.95);
+    }
+
+    @media (max-width: 768px) {
+      .theme-toggle {
+        top: 0.75rem;
+        right: 0.75rem;
+        width: 2.5rem;
+        height: 2.5rem;
+        font-size: 1rem;
+      }
+    }
   </style>
 </head>
 
 <body>
+  <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+    <span id="themeIcon">🌙</span>
+  </button>
+  
+  <div class="container">
   <div class="card">
-    <h1>Speak an Address → Open It in Google Maps</h1>
-    <button id="btn" class="go">🎤 Start Listening</button>
-    <p class="hint">Say: <em>“123 Main Street, Elkhart Indiana”</em> or “navigate to Walmart Goshen”.</p>
-    <input id="text" placeholder="…or type an address and press Enter" />
-    <p id="status"></p>
+      <div class="header">
+        <div class="hamburger" id="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        
+        <nav class="main-nav">
+          <a href="index.html" class="nav-link active">Home</a>
+          <a href="about.html" class="nav-link">About</a>
+          <a href="contact.html" class="nav-link">Contact</a>
+          <a href="privacy-policy.html" class="nav-link">Privacy</a>
+          <a href="terms-of-service.html" class="nav-link">Terms</a>
+        </nav>
+        
+        <nav class="mobile-nav" id="mobileNav">
+          <a href="index.html" class="nav-link active">Home</a>
+          <a href="about.html" class="nav-link">About</a>
+          <a href="contact.html" class="nav-link">Contact</a>
+          <a href="privacy-policy.html" class="nav-link">Privacy</a>
+          <a href="terms-of-service.html" class="nav-link">Terms</a>
+        </nav>
+        
+        <h1 class="title">Speak to Maps - Voice to Google Maps</h1>
+        <p class="subtitle">Say an address, open it instantly in Google Maps</p>
+      </div>
+
+      <div class="controls">
+        <button id="btn" class="button go">
+          <span>🎤</span>
+          <span>Start Listening</span>
+        </button>
+        
+        <div class="input-group">
+          <input id="text" class="input" placeholder="Type an address and press Enter" />
+        </div>
+        
+        <p class="hint">Try saying: <em>"123 Main Street, Elkhart Indiana"</em> or <em>"navigate to Walmart Goshen"</em></p>
+        
+        <div id="status" class="status"></div>
+      </div>
+
+      <div class="content">
+        <div class="features">
+          <div class="feature">
+            <span class="feature-icon">🚀</span>
+            <h2 class="feature-title">Lightning Fast Voice Recognition</h2>
+            <p class="feature-desc">Instant voice recognition and map opening</p>
+          </div>
+          <div class="feature">
+            <span class="feature-icon">🔒</span>
+            <h2 class="feature-title">Privacy First Navigation</h2>
+            <p class="feature-desc">No data collection or tracking</p>
+          </div>
+          <div class="feature">
+            <span class="feature-icon">📱</span>
+            <h2 class="feature-title">Cross-Platform Voice to Maps</h2>
+            <p class="feature-desc">Works on Android, desktop, and tablets</p>
+          </div>
+        </div>
+
+        <section>
+          <h2>About Speak to Maps</h2>
     <p>
       This website was built for speed, privacy, and ease of use. No accounts, no tracking, and no downloads—just quick directions when you need them.
     </p>
     <p>
       Speak to Maps is a simple tool that lets you say any address out loud and open it directly in Google Maps.
-      It works on Android phones, iPhones, tablets, and desktop browsers without needing to install an app.
-      Just tap the microphone, say an address, and Maps opens ready to navigate.
+            It works best on Android phones, tablets, and desktop browsers. On iPhones, you can type addresses directly.
+            Just tap the microphone (or type), and Maps opens ready to navigate.
     </p>
+        </section>
+      </div>
+    </div>
+    
+    <footer class="footer">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>Speak to Maps</h3>
+          <ul>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="index.html">Home</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Legal</h3>
+          <ul>
+            <li><a href="privacy-policy.html">Privacy Policy</a></li>
+            <li><a href="terms-of-service.html">Terms of Service</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Support</h3>
+          <ul>
+            <li><a href="contact.html">Help Center</a></li>
+            <li><a href="mailto:support@speaktomaps.com">Email Support</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2024 Speak to Maps. All rights reserved. | Voice to Google Maps Navigation Tool</p>
+      </div>
+    </footer>
   </div>
 
   <script>
     // Helpers
     const $ = id => document.getElementById(id);
-    const status = msg => { $("status").textContent = msg || ""; };
+    const status = (msg, type = 'info') => { 
+      const statusEl = $("status");
+      statusEl.textContent = msg || "";
+      statusEl.className = `status ${type}`;
+    };
 
     // Decide best URI for the device
     function mapsURLFromQuery(q) {
@@ -84,18 +744,27 @@
     }
 
     function openMaps(q) {
-      if (!q) return status("Heard nothing—try again.");
-      status(`Opening: ${q}`);
+      if (!q) return status("Heard nothing—try again.", 'error');
+      status(`Opening: ${q}`, 'success');
       // Open in same tab to avoid popup blockers
       location.href = mapsURLFromQuery(q);
     }
 
     // Typed input support
     $("text").addEventListener("keydown", e => {
-      if (e.key === "Enter") openMaps(e.target.value.trim());
+      if (e.key === "Enter") {
+        const value = e.target.value.trim();
+        if (value) {
+          openMaps(value);
+        }
+      }
     });
 
-    // Speech recognition (Chrome/Edge/Android best)
+    // Detect iOS and provide appropriate messaging
+    const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent);
+    const isSafari = /Safari/.test(navigator.userAgent) && !/Chrome/.test(navigator.userAgent);
+    
+    // Speech recognition (Chrome/Edge/Android best, limited iOS support)
     const SR = window.SpeechRecognition || window.webkitSpeechRecognition;
     let rec, listening = false;
 
@@ -109,29 +778,156 @@
         const transcript = e.results?.[0]?.[0]?.transcript || "";
         openMaps(transcript.replace(/^navigate to/i, "").trim());
       };
-      rec.onerror = e => status(`Mic error: ${e.error}`);
-      rec.onend = () => { listening = false; btn.className = "go"; btn.textContent = "🎤 Start Listening"; };
+      
+      rec.onerror = e => {
+        let errorMsg = "Mic error occurred";
+        switch(e.error) {
+          case 'no-speech':
+            errorMsg = "No speech detected. Try again.";
+            break;
+          case 'audio-capture':
+            errorMsg = "Microphone not found. Check your device.";
+            break;
+          case 'not-allowed':
+            errorMsg = "Microphone permission denied. Please allow access.";
+            break;
+          case 'network':
+            errorMsg = "Network error. Check your connection.";
+            break;
+          case 'service-not-allowed':
+            if (isIOS) {
+              errorMsg = "Speech recognition not available on iOS Safari. Please type the address instead.";
+            } else {
+              errorMsg = "Speech recognition service not available. Please type the address instead.";
+            }
+            break;
+          default:
+            if (isIOS) {
+              errorMsg = "Speech recognition has limited support on iOS. Please type the address instead.";
+            } else {
+              errorMsg = `Mic error: ${e.error}`;
+            }
+        }
+        status(errorMsg, 'error');
+      };
+      
+      rec.onend = () => { 
+        listening = false; 
+        btn.className = "button go";
+        btn.innerHTML = '<span>🎤</span><span>Start Listening</span>';
+      };
     } else {
-      status("Speech recognition not supported here. Type the address instead.");
+      if (isIOS) {
+        status("Speech recognition not supported on iOS Safari. Please type the address instead.", 'error');
+      } else {
+        status("Speech recognition not supported here. Type the address instead.", 'error');
+      }
     }
 
     const btn = $("btn");
     btn.onclick = () => {
-      if (!rec) return status("Speech recognition not supported in this browser.");
+      if (!rec) {
+        if (isIOS) {
+          return status("Speech recognition not supported on iOS Safari. Please type the address instead.", 'error');
+        } else {
+          return status("Speech recognition not supported in this browser.", 'error');
+        }
+      }
+      
       if (!listening) {
         listening = true;
-        btn.className = "stop";
-        btn.textContent = "🛑 Stop";
-        status("Listening…");
-        try { rec.start(); } catch {}
+        btn.className = "button stop";
+        btn.innerHTML = '<span>🛑</span><span>Stop</span>';
+        status("Listening…", 'info');
+        try { 
+          rec.start(); 
+        } catch (e) {
+          if (isIOS) {
+            status("Speech recognition has limited support on iOS. Please type the address instead.", 'error');
+          } else {
+            status("Failed to start listening. Try again.", 'error');
+          }
+          listening = false;
+          btn.className = "button go";
+          btn.innerHTML = '<span>🎤</span><span>Start Listening</span>';
+        }
       } else {
         rec.stop();
       }
     };
+
+    // Add loading state for better UX
+    function setLoading(isLoading) {
+      if (isLoading) {
+        btn.classList.add('loading');
+      } else {
+        btn.classList.remove('loading');
+      }
+    }
+
+    // Enhanced input handling
+    const input = $("text");
+    input.addEventListener('focus', () => {
+      input.style.borderColor = 'var(--border-focus)';
+    });
+    
+    input.addEventListener('blur', () => {
+      input.style.borderColor = 'var(--border)';
+    });
+
+    // iOS-specific enhancements
+    if (isIOS) {
+      // Make text input more prominent on iOS
+      input.style.borderWidth = '3px';
+      input.style.fontSize = '1.1rem';
+      input.style.padding = '1.2rem 1.5rem';
+      
+      // Update placeholder text for iOS
+      input.placeholder = "Type an address and press Enter (Voice not available on iOS)";
+      
+      // Add iOS-specific hint
+      const hint = document.querySelector('.hint');
+      hint.innerHTML = 'Try typing: <em>"123 Main Street, Elkhart Indiana"</em> or <em>"Walmart Goshen"</em>';
+    }
+
+    // Hamburger Menu Functionality
+    const hamburger = $("hamburger");
+    const mobileNav = $("mobileNav");
+    
+    hamburger.addEventListener('click', () => {
+      hamburger.classList.toggle('active');
+      mobileNav.classList.toggle('active');
+    });
+
+    // Close mobile menu when clicking on a link
+    const mobileNavLinks = mobileNav.querySelectorAll('.nav-link');
+    mobileNavLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        hamburger.classList.remove('active');
+        mobileNav.classList.remove('active');
+      });
+    });
+
+    // Theme Toggle Functionality
+    const themeToggle = $("themeToggle");
+    const themeIcon = $("themeIcon");
+    
+    // Get saved theme or default to dark
+    const savedTheme = localStorage.getItem('theme') || 'dark';
+    document.documentElement.setAttribute('data-theme', savedTheme);
+    themeIcon.textContent = savedTheme === 'dark' ? '🌙' : '☀️';
+    
+    themeToggle.addEventListener('click', () => {
+      const currentTheme = document.documentElement.getAttribute('data-theme');
+      const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+      
+      document.documentElement.setAttribute('data-theme', newTheme);
+      themeIcon.textContent = newTheme === 'dark' ? '🌙' : '☀️';
+      localStorage.setItem('theme', newTheme);
+    });
   </script>
 </body>
 </html>
-
 
 
 
